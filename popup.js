@@ -31,7 +31,7 @@ function getFilename(contentURL) {
     } else {
         name = '';
     }
-    return 'screencapture' + name + '-' + Date.now() + '.png';
+    return name + '-' + '1366x768.png';
 }
 
 
