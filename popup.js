@@ -24,11 +24,10 @@ function getFilename(contentURL) {
     if (name) {
         name = name
             .replace(/^https?:\/\//, '')
-            .replace(/[^A-z0-9]+/g, '-')
-            .replace(/-+/g, '-')
+            .replace(/\/$/, '')
+            .replace(/\//g, '!')
             .replace(/^[_\-]+/, '')
             .replace(/[_\-]+$/, '');
-        name = '-' + name;
     } else {
         name = '';
     }
