@@ -43,6 +43,7 @@ window.CaptureAPI = (function() {
 
 
     function capture(data, screenshots, sendResponse, splitnotifier) {
+      setTimeout(function() {
         chrome.tabs.captureVisibleTab(
             null, {format: 'png', quality: 100}, function(dataURI) {
                 if (dataURI) {
@@ -94,6 +95,7 @@ window.CaptureAPI = (function() {
                     image.src = dataURI;
                 }
             });
+      }, 750)
     }
 
 
